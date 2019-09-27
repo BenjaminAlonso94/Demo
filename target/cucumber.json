@@ -1,0 +1,84 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-09-26T22:04:19.292Z",
+        "line": 3,
+        "name": "MTC_0200_HP_UAT_CN_Tipo 3_DDA_CUENTA MAESTRA_INE NO DISPONIBLE_Celular Certificado",
+        "description": "",
+        "id": "demo;mtc-0200-hp-uat-cn-tipo-3-dda-cuenta-maestra-ine-no-disponible-celular-certificado",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10744669900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Numero de ciente 85787738",
+            "match": {
+              "arguments": [
+                {
+                  "val": "85787738",
+                  "offset": 17
+                }
+              ],
+              "location": "DemoSteps.numero_de_cliente_n(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1169800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Cliente tipo 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 13
+                }
+              ],
+              "location": "DemoSteps.cliente_tipo_n(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 997500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Cliente no es el mostrado",
+            "match": {
+              "location": "DemoSteps.i_ask_whether_it_s_Friday_yet()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 957239100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Inicia el proceso de alta TDD",
+            "match": {
+              "location": "DemoSteps.i_should_be_told()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Demo",
+    "description": "  Es una ejecución para revisar el funcionamiento de la automatización",
+    "id": "demo",
+    "keyword": "Feature",
+    "uri": "file:demo.feature",
+    "tags": []
+  }
+]
