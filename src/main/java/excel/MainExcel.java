@@ -32,6 +32,8 @@ public class MainExcel {
 
     @Test
     public void shouldCalculat() {
+
+        System.out.println("jalou");
         System.out.println("jalou");
     }
 }
