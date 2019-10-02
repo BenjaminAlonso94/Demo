@@ -16,10 +16,10 @@ public class DemoSelenium extends Word {
     public void abrirUrl(){
         try {
             crearDocumentoST();
-            System.setProperty("webdriver.ie.driver", "C:\\Users\\softtek\\IdeaProjects\\Prueba\\driver\\IEDriverServer.exe");
-            //System.setProperty("webdriver.chrome.driver", "C:\\Users\\softtek\\IdeaProjects\\Prueba\\driver\\chromedriver.exe");
-            driver = new InternetExplorerDriver();
-            //driver = new ChromeDriver();
+            //System.setProperty("webdriver.ie.driver", "C:\\Users\\softtek\\IdeaProjects\\Prueba\\driver\\IEDriverServer.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\softtek\\IdeaProjects\\Prueba\\driver\\chromedriver.exe");
+            //driver = new InternetExplorerDriver();
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.navigate().to("https://www.seleniumhq.org/");
             Thread.sleep(5000);

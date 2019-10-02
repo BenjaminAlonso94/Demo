@@ -30,7 +30,7 @@ public class SpreadsheetData {
     private Collection<Object[]> loadFromSpreadsheet(final String excelFile)
             throws IOException, InvalidFormatException {
         FileInputStream fis = new FileInputStream(excelFile);
-        XSSFWorkbook workbook = new XSSFWorkbook (fis);
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);
         data = new ArrayList<>();
         Sheet sheet = workbook.getSheetAt(0);
         int numberOfColumns = countNonEmptyColumns(sheet);
@@ -70,7 +70,6 @@ public class SpreadsheetData {
     private int firstEmptyCellPosition(final Row cells) {
         int columnCount = 0;
         for (Cell cell : cells) {
-            System.out.println("Este es su tipo "+cell.getCellType());
             if (cell.getCellType() == CellType.BLANK) {
                 break;
             }
@@ -87,7 +86,7 @@ public class SpreadsheetData {
             cellValue = getNumericCellValue(cell);
         } else if (cell.getCellType() == CellType.BOOLEAN) {
             cellValue = cell.getBooleanCellValue();
-        } else if (cell.getCellType()  ==CellType.FORMULA) {
+        } else if (cell.getCellType() == CellType.FORMULA) {
             cellValue = evaluateCellFormula(workbook, cell);
         }
         return cellValue;
