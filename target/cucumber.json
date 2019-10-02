@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-09-26T22:04:19.292Z",
+        "start_timestamp": "2019-10-02T16:59:07.828Z",
         "line": 3,
         "name": "MTC_0200_HP_UAT_CN_Tipo 3_DDA_CUENTA MAESTRA_INE NO DISPONIBLE_Celular Certificado",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10744669900,
+              "duration": 26728150900,
               "status": "passed"
             },
             "line": 4,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1169800,
+              "duration": 4429700,
               "status": "passed"
             },
             "line": 5,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 997500,
+              "duration": 1937800,
               "status": "passed"
             },
             "line": 6,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 957239100,
+              "duration": 1917478900,
               "status": "passed"
             },
             "line": 7,
