@@ -19,7 +19,7 @@ public class Spreadsheet {
     XSSFCell cellNew = null;
     int rows = 0;
     int cells = 0;
-    final boolean flagNomCamp = false;
+    final boolean flagNomCamp = true;
 
     public void setWorkbook(XSSFWorkbook workbook) {
         this.workbook = workbook;

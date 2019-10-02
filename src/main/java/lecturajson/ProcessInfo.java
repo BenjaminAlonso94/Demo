@@ -26,7 +26,7 @@ public class ProcessInfo extends Spreadsheet {
 
     public void dumpJSONElement(JsonElement elemento) {
         if (elemento.isJsonObject()) {
-            System.out.println("Es objeto");
+            //System.out.println("Es objeto");
             JsonObject obj = elemento.getAsJsonObject();
             java.util.Set<java.util.Map.Entry<String, JsonElement>> entradas = obj.entrySet();
             java.util.Iterator<java.util.Map.Entry<String, JsonElement>> iter = entradas.iterator();
@@ -35,35 +35,35 @@ public class ProcessInfo extends Spreadsheet {
                 if (!entrada.getKey().equals("RESPONSE")) {
                     createCell(entrada.getKey(), true);
                 }
-                System.out.println("Clave: " + entrada.getKey());
-                System.out.println("Valor:");
+                //System.out.println("Clave: " + entrada.getKey());
+                //System.out.println("Valor:");
                 dumpJSONElement(entrada.getValue());
             }
         } else if (elemento.isJsonArray()) {
             JsonArray array = elemento.getAsJsonArray();
-            System.out.println("Es array. Numero de elementos: " + array.size());
+            //System.out.println("Es array. Numero de elementos: " + array.size());
             java.util.Iterator<JsonElement> iter = array.iterator();
             while (iter.hasNext()) {
                 JsonElement entrada = iter.next();
                 dumpJSONElement(entrada);
             }
         } else if (elemento.isJsonPrimitive()) {
-            System.out.println("Es primitiva");
+            //System.out.println("Es primitiva");
             JsonPrimitive valor = elemento.getAsJsonPrimitive();
             if (valor.isBoolean()) {
-                System.out.println("Es booleano: " + valor.getAsBoolean());
+                //System.out.println("Es booleano: " + valor.getAsBoolean());
                 createCell(valor.getAsBoolean(), false);
             } else if (valor.isNumber()) {
-                System.out.println("Es numero: " + valor.getAsNumber());
+                //System.out.println("Es numero: " + valor.getAsNumber());
                 createCell(valor.getAsNumber(), false);
             } else if (valor.isString()) {
-                System.out.println("Es texto: " + valor.getAsString());
+                //System.out.println("Es texto: " + valor.getAsString());
                 createCell(valor.getAsString(), false);
             }
         } else if (elemento.isJsonNull()) {
-            System.out.println("Es NULL");
+            //System.out.println("Es NULL");
         } else {
-            System.out.println("Es otra cosa");
+            //System.out.println("Es otra cosa");
         }
     }
 }
